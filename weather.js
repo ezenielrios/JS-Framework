@@ -1,4 +1,10 @@
-let state = reactive({selectedCity: 'London'});
+let state = reactive({selectedCity: 'London',
+  weather: {
+    temperature: 'N/A',
+    humidity: 'N/A',
+    description: ''
+  }
+});
 
 
 function renderApp() {
@@ -8,9 +14,9 @@ function renderApp() {
   <option value="New York">New York</option>
   </select>
   <div>
-    <p>Temperature: ${state.temperature}</p>
-    <p>Humidity: ${state.humidity}</p>
-    <p>Description: ${state.description}</p>
+    <p>Temperature: ${state.weather.temperature}</p>
+    <p>Humidity: ${state.weather.humidity}</p>
+    <p>Description: ${state.weather.description}</p>
     <p>Humidity: 
   </div>`)
 }
