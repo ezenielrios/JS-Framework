@@ -1,3 +1,12 @@
+let state = reactive({message: 'Hello Universe!'});
 
 
-render('#container', `<h1>Hello Universe!</h1>`)
+function renderApp() {
+  render('#container', `<h1>${state.message}</h1>`)
+}
+
+renderApp()
+
+setTimeout(() => {
+  state.message = 'Hello World!'
+},1000);
